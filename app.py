@@ -17,7 +17,7 @@ dbs=SQLAlchemy(app)
 DB_NAME="database.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 meta=db.MetaData()
-engine = db.create_engine("postgres://xbfvemmmdhhzkw:4757f5a5d1372eb80cdc4a99399045244e9fca63cb01fb5d4336115544feb9d3@ec2-54-147-33-38.compute-1.amazonaws.com:5432/dfl1c7euk3sg98")
+engine = db.create_engine("postgresql://xbfvemmmdhhzkw:4757f5a5d1372eb80cdc4a99399045244e9fca63cb01fb5d4336115544feb9d3@ec2-54-147-33-38.compute-1.amazonaws.com:5432/dfl1c7euk3sg98")
 meta.create_all(engine)
 # create a table schema
 users = db.Table( 'users', meta,
