@@ -25,7 +25,7 @@ users = db.Table( 'users', meta,
     Column('user_email', VARCHAR),
 )
  
-@app.route("/")
+@app.route("/",methods=["GET","POST")
 def siginup():
     if request.method=="POST":
         user=request.form.get("variable")
