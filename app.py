@@ -28,9 +28,10 @@ users = db.Table( 'users', meta,
 @app.route("/",methods=["GET","POST"])
 def siginup():
     if request.method=="POST":
+        global user
         user=request.form.get("variable")
-        user=users(user_email=user)
-        db.session.add(user)
+        users=users(user_email=user)
+        db.session.add(users)
         db.session.commit()
         sql=text("SELECT")
         result = engine.execute(sql).fetchall()
