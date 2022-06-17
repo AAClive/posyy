@@ -30,12 +30,6 @@ def siginup():
     if request.method=="POST":
         global user
         user=request.form.get("variable")
-        global users
-        users=users(user_email=user)
-        db.session.add(users)
-        db.session.commit()
-        sql=text("SELECT")
-        result = engine.execute(sql).fetchall()
         return render_template("main.html",data=db,s=user)
     return render_template("main.html",data=db)
         
