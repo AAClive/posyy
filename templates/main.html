@@ -24,6 +24,9 @@
     <form method="post">
         <input type="text" placeholder="e.g The Orbs by BT" name="variable">
         <button type="submit" class="btn btn-danger">Search</button>
+        {% for user in s %}
+            <p>{{user}}</p>
+        {% endfor %}
     </form>
     </div>
     
