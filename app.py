@@ -30,6 +30,7 @@ def siginup():
     if request.method=="POST":
         global user
         user=request.form.get("variable")
+        global users
         users=users(user_email=user)
         db.session.add(users)
         db.session.commit()
