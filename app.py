@@ -34,7 +34,7 @@ def siginup():
         db.session.commit()
         sql=text("SELECT")
         result = engine.execute(sql).fetchall()
-    return render_template("main.html",data=db)
+    return render_template("main.html",data=db,s=user)
         
 
 if __name__=="__main__":
